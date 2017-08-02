@@ -1,0 +1,855 @@
+/*** --- Блоки сайта --- ***/
+html,
+body {}
+body {
+	font-size: 14px;
+	line-height: 21px;
+	font-family: 'PT Sans', Arial, sans-serif;
+	text-transform: uppercase;
+	color: #333;
+	background: #f2f2f2;
+}
+	.main-container {
+		position: relative;
+		overflow: hidden;
+		max-width: 1200px;
+		min-width: 768px;
+		min-height: 100%;
+		margin: 0 auto;
+		background: #fff;
+		box-shadow: 0 -5px 15px 0 rgba(0,0,0,.2);
+	}
+
+
+/*** --- Header --- ***/
+.main-header {
+	position: relative;
+	background: #fff;
+}
+	.main-header .logo {
+		position: absolute;
+		z-index: 1;
+		left: 50%;
+		width: 188px;
+		height: 96px;
+		margin-left: -94px;
+		font-size: 0;
+		line-height: 0;
+		color: transparent;
+		background: transparent url('../img/logo.png') no-repeat 0 0;
+	}
+
+	.main-menu a.btn-mobile {
+		display:none;
+		visibility:hidden;
+	}
+	.main-menu ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		font-size: 0;
+	}
+		.main-menu li {
+			display: inline-block;
+			vertical-align: top;
+			width: 20%;
+		}
+			.main-menu a {
+				display: block;
+				padding: 15px 0;
+				font-size: 14px;
+				line-height: 26px;
+				font-weight: bold;
+				text-align: center;
+				text-decoration: none;
+				color: #000;
+			}
+
+			.main-menu a:hover {
+				color: #81b3d2;
+			}
+
+			.main-menu a:active {
+				color: #000;
+				opacity: .3;
+			}
+
+		.main-menu .active {
+			color: #766357;
+		}
+
+		.main-menu .active:hover {
+			color: #604e43;
+		}
+
+		.main-menu .active:active {
+			color: #766357;
+			opacity: .3;
+		}
+
+		.main-menu li:nth-child(2) {
+			margin-right: 20%;
+		}
+
+
+/*** --- Footer --- ***/
+/*.main-footer {}*/
+	.main-footer .footer-columns {
+		padding: 47px 0 30px;
+		text-align: center;
+		background: rgba(254,254,254,.9);
+		display: flex;
+		justify-content: space-around;
+	}
+	.footer-hashtag {
+		padding: 17px 0;
+	}
+		.footer-hashtag a {
+			font-size: 21px;
+			line-height: 26px;
+			font-weight: bold;
+			text-decoration: none;
+		}
+		.footer-hashtag a {
+			color: #000;
+		}
+
+		.footer-hashtag a:hover {
+			color: #81b3d2;
+		}
+
+		.footer-hashtag a:active {
+			color: #000;
+			opacity: .3;
+		}
+
+	.footer-socials ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		font-size: 0;
+	}
+	.footer-socials li {
+		display: inline-block;
+		vertical-align: top;
+		margin: 6px 3px;
+	}
+		.btn.btn-social {
+			display: block;
+			width: 46px;
+			height: 48px;
+			padding: 0;
+			font-size: 0;
+			line-height: 0;
+		}
+		.btn-social::before {
+			font-size: 20px;
+			line-height: 48px;
+		}
+
+	.footer-copyright {
+		padding: 6px 0;
+		font-size: 0;
+	}
+		.footer-copyright span,
+		.footer-copyright .logo-htmlacademy {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		.footer-copyright span {
+			margin-left: 10px;
+			font-size: 14px;
+		}
+
+		.logo-htmlacademy {
+			width: 27px;
+			height: 34px;
+			margin: 4px 8px;
+			text-decoration: none;
+			background: transparent url('../img/logo-htmlacademy.png') no-repeat;
+			background-position: 50% 0;
+		}
+
+		.logo-htmlacademy:hover {
+			background-position: 50% -48px;
+		}
+
+		.logo-htmlacademy:active {
+			background-position: 50% -97px;
+		}
+
+/*** --- Сетка --- ***/
+.clearfix::before,
+.clearfix::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+/*** --- Main --- ***/
+.content {
+	min-height: calc(100vh - 60px);
+	max-width: 960px;
+	min-width: 768px;
+	padding: 0 40px;
+	margin: 0 auto;
+}
+
+/*** Постера ***/
+.main-poster {
+	position: relative;
+	height: 302px;
+	background: url(../img/bg-main-poster.jpg) no-repeat 50% 100%;
+	background-size: cover;
+}
+/* нижняя маска постера */
+.main-poster::after {
+	content: '';
+	position: absolute;
+	z-index: 2;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 57px;
+	background: url('../img/bg-poster-mask.png') no-repeat 0 50%;
+	background-size: 100% 57px;
+}
+
+	.slogan {
+		position: absolute;
+		z-index: 1;
+		left: 50%;
+		width: 461px;
+		height: 79px;
+		margin-left: -230px;
+		font-size: 0;
+		line-height: 0;
+		color: transparent;
+		background: transparent url('../img/bg-poster-text.png') no-repeat;
+	}
+		.slogan-sedona {
+			top: 102px;
+			background-position: 0 0;
+		}
+
+
+/*** --- Заголовок --- ***/
+.main-title {
+	padding: 50px 0 0;
+	line-height: 26px;
+	text-align: center;
+}
+	.main-title h1 {
+		width: 450px;
+		margin: 0 auto;
+		padding: 60px 0 20px;
+		font-size: 30px;
+		color: #000;
+	}
+
+	.main-title p {
+		margin: 10px 0;
+	}
+
+
+/*** --- Отзывы --- ***/
+.main-review {
+	margin: 50px 0;
+	line-height: 26px;
+}
+
+
+
+/*** --- кнопки --- ***/
+.btn {
+	display: inline-block;
+	vertical-align: top;
+	padding: 5px 17px;
+	border: none;
+	outline: none;
+	font-size: 14px;
+	line-height: 21px;
+	font-family: 'PT Sans', Arial, sans-serif;
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #fff;
+	background: #81b3d2;
+	cursor: pointer;
+}
+.btn-big {
+	font-size: 21px;
+	padding: 18px 149px;
+}
+
+.btn:hover {
+	background: #669ec0;
+}
+
+.btn:active {
+	color: rgba(255,255,255,.3);
+	background: #5496bd;
+}
+
+/*** Поля информационные и оформления формы ***/
+fieldset {
+	padding: 0.35em 0 0.75em;
+}
+	fieldset ul {
+		list-style: none;
+	}
+
+		fieldset ul li {
+			margin-bottom: 11px;
+		}
+		
+/*title*/
+.review-form-title {
+	overflow: hidden;
+    text-align: center;
+	font-size: 21px;
+	margin: 25px 0;
+}
+	.review-form-title span {
+		width: 280px;
+		display: inline-flex;
+		align-items: center;
+	}
+	.review-form-title span:before,
+	.review-form-title span:after {
+		content: '';
+		display: inline-block;
+		vertical-align: middle;
+		width: 100%;
+		height: 1px;
+		background-color: #dbdbdb;
+		position: relative;
+	}
+	.review-form-title span:before {
+		margin-left: -100%;
+		left: -65px;
+	}
+	.review-form-title span:after {
+		margin-right: -100%;
+		right: -65px;
+	}
+
+	
+.form-row {
+	display: inline-flex;
+	justify-content: left;
+	width: 100%;
+	align-items: center;
+	font-size: 14px;
+}
+	.form-row label {
+		margin-right: 15px;
+	}
+
+.review-doubleblock {
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 0;
+}
+	.review-form-personal {
+		display: inline-flex;
+		flex-direction: column;
+		width: 100%;
+		position: relative;
+		}
+		.review-form-personal input {
+			width:100%;
+		}
+	.review-form-personal:nth-child(2) {
+		padding-left: 160px;
+	}
+	.review-form-personal:nth-child(2)::before{
+		content:'';
+		width:1px;
+		height: 85%;
+		display: inline-block;
+		background-color: #dbdbdb;
+		position: absolute;
+		left: 80px;
+		top: 31px;
+	}
+	.review-form-personal .review-form-title {
+		margin-top: 0;
+		margin-bottom: 55px;
+	}
+	.review-form-personal:nth-child(2) .review-form-title {
+		text-align: left;
+	}	
+	.review-form-checkbox {
+		margin-bottom: 35px;
+	}
+		.review-form-checkbox ul {
+			display: flex;
+			justify-content: space-between;
+		}
+	.review-form-textarea{
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 15px;
+	}
+	
+	.review-doubleblock > .form-row {
+		margin: 46px 0 0;
+	}
+	
+	.form-clarify{
+		float: right;
+		margin-top: 17px;
+	}
+	
+/*** --- поля ввода --- ***/
+.form-input,
+.form-textarea {
+	box-sizing: border-box;
+	padding: 10px 20px;
+	border: 2px solid #f2f2f2;
+	outline: none;
+	font-size: 18px;
+	line-height: 34px;
+	font-family: 'PT Sans', Arial, sans-serif;
+	font-weight: bold;
+	color:#000;
+	margin-right:2px;
+	background: #f2f2f2;
+	text-transform: none;
+}
+.form-textarea {
+	width: 100%;
+	height: 160px;
+	margin: 22px 0;
+}
+
+.form-input:hover {
+	border-color: #ebebeb;
+	background: #ebebeb;
+}
+
+.form-input:focus {
+	border-color: #e5e5e5;
+	background: #fff;
+}
+	.form-input.form-input-error {
+		border-color: #f00;
+	}
+		.btn.btn-icons {
+			background: #e6e6e6;
+			color: #000;
+			display: inline-block;
+			width: 58px;
+			height: 58px;
+			padding: 0;
+			font-size: 0;
+			line-height: 0;
+		}
+		.btn-icons::before {
+			font-size: 20px;
+			line-height: 58px;
+		}
+
+
+/*** checkbox ***/
+.form-checkbox {
+	display: none;
+}
+
+	.form-checkbox + .form-label {
+		position: relative;
+		padding-left: 80px;
+		font-size: 18px;
+		font-weight: bold;
+		line-height: 70px;
+		cursor: pointer;
+		text-transform: none;
+	}
+	.form-checkbox + .form-label::before {
+		/* content: '\2610'; */
+		content: '';
+		position: absolute;
+		left: 4px;
+		top: -12px;
+		width: 56px;
+		height: 56px;
+		background-color: #f2f2f2;
+		border-radius: 5px;
+		font-family:'FontAwesome';
+		font-size: 22px;
+		line-height: 56px;
+		text-align:center;
+		color: #333;
+		transition: 0.3s;
+	}
+
+	.form-checkbox:checked + .form-label::before {
+		content: '\f00c';
+		color: #333;
+		background-color: #e5e5e5;
+	}
+
+	.form-checkbox + .form-label:hover::before {
+		color: #333;
+		background-color: #e5e5e5;
+	}
+
+	.form-checkbox:disabled + .form-label,
+	.form-checkbox:disabled + .form-label::before,
+	.form-checkbox:disabled + .form-label:hover::before {
+		color: rgba(51,51,51,.3);
+		background-color:#d5d5d5;
+		cursor: default;
+	}
+
+
+/*** radio ***/
+.form-radio {
+	display: none;
+}
+
+	.form-radio + .form-label {
+		position: relative;
+		padding-left: 80px;
+		font-size: 18px;
+		font-weight: bold;
+		line-height: 70px;
+		cursor: pointer;
+		text-transform: none;
+	}
+	.form-radio + .form-label::before {
+		/*content: '\2610';*/
+		content: '';
+		position: absolute;
+		left: 4px;
+		top: -12px;
+		width: 56px;
+		height: 56px;
+		background-color: #f2f2f2;
+		border-radius: 50%;
+		font-family:'FontAwesome';
+		font-size: 22px;
+		line-height: 56px;
+		text-align:center;
+		color: #333;
+		transition: 0.3s;
+	}
+
+	.form-radio:checked + .form-label::before {
+		content: '\f111';
+		color: #333;
+		background-color: #e5e5e5;;
+	}
+
+	.form-radio + .form-label:hover::before {
+		color: #333;
+		background-color: #e5e5e5;
+	}
+
+	.form-radio:disabled + .form-label,
+	.form-radio:disabled + .form-label::before,
+	.form-radio:disabled + .form-label:hover::before {
+		color: rgba(51,51,51,.3);
+		background-color:#d5d5d5;
+		cursor: default;
+	}
+	
+	
+	
+
+/*** --- Tablet --- ***/
+@media (max-width: 768px) {
+	.main-container,
+	.content {
+		max-width:768px;
+		min-width:650px;
+	}
+		.content {
+			padding: 0 60px;
+		}
+			.main-header .logo {
+				background-image:url('../img/logo_tablet.png');
+				margin-left: -51px;
+				width: 102px;
+				height: 83px;
+			}
+			.main-poster {
+				height: 290px;
+				background-size: auto;
+			}
+			.main-poster::after {
+				background: url('../img/bg-poster-mask_tablet.png') no-repeat 0 50%;
+			}
+				.slogan-sedona {
+					top: 94px;
+				}
+	.main-title {
+		padding:15px 0;
+	}
+	.main-review {
+		margin: 0;
+	}
+		.review-form-personal:nth-child(2) {
+			padding-left: 105px;
+		}
+		.review-form-personal:nth-child(2)::before{
+			top: 15px;
+			left: 50px;
+		}
+		.review-doubleblock-column {
+			flex-direction: column;
+		}
+		.form-row {
+			overflow: hidden;
+		}	
+		.review-form-textarea {
+			margin-bottom: 23px;
+		}
+		.main-footer .footer-columns {
+			padding: 25px 0;
+		}
+		.form-radio + .form-label::before {
+				top: -20px;
+				left: 0;
+			}
+		.review-doubleblock-column .form-row{
+			display: block;
+			margin:0;
+		}
+		.form-row input{
+			display: inline-block;
+			width: 90%;
+			margin-right: -4px;
+		}
+		
+		.review-doubleblock-column .form-row label {
+			margin: 0 20px;
+			display: block;
+			padding-bottom: 10px;
+		}
+		.review-form-checkbox ul {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+			.review-form-checkbox ul li {
+				width: 35%;
+			}
+			.btn-big {
+				padding: 18px 70px;
+			}
+
+}
+
+/*** --- Mobile --- ***/
+@media (max-width: 320px) {
+	.main-container,
+	.content {
+		max-width:320px;
+		min-width:250px;
+	}
+	.content {
+		padding: 0;
+	}
+	
+	.main-header .logo {
+		bottom: -27px;
+	}
+	.main-menu a.btn-mobile {
+		display: block;
+		visibility: visible;
+		position: absolute;
+	}
+	.btn-mobile.close{
+		top: 0;
+		right: 34px;
+		position: absolute;
+	}
+	.close:before, .close:after {
+		position: absolute;
+		content: ' ';
+		height: 28px;
+		width: 4px;
+		background-color: #fff;
+	}
+	.close:before {
+		transform: rotate(45deg);
+	}
+	.close:after {
+		transform: rotate(-45deg);
+	}
+	.btn-mobile.fa-navicon{
+		font-size: 28px;
+		width: 23px;
+		height: 23px;
+		right:21px;
+		bottom: 17px;
+		color:#81b3d2;
+		background:none;
+		padding:0;
+	}
+	.btn-mobile.fa-navicon:hover{
+		background: none;
+		color:#81b3d2;
+	}
+	
+	
+	.main-menu{
+		padding-bottom:55px;
+		background: #fff;
+	}
+		.main-menu ul {
+			font-size: 14px;
+		}
+			.main-menu li {
+				display: block;
+				vertical-align: top;
+				width: 100%;
+				border-bottom: 2px #81b3d2 groove;
+			}
+				.main-menu a {
+					font-size: 18px;
+					line-height: 24px;
+					color: #fff;
+					background: #81b3d2;
+					cursor: pointer;
+				}
+
+				.main-menu a:hover {
+					color: #fff;
+					background: #669ec0;
+				}
+
+				.main-menu a:active {
+					color: rgba(255,255,255,.3);
+					background: #5496bd;
+				}
+
+			.main-menu .active {
+				color: #766357;
+			}
+
+			.main-menu .active:hover {
+				color: #604e43;
+			}
+
+			.main-menu .active:active {
+				color: #766357;
+				opacity: .3;
+			}
+
+	.main-poster {
+		height: 158px;
+		background-size: auto;
+	}
+	.main-poster::after {
+		height: 27px;
+		background: url('../img/bg-poster-mask_mobile.png') no-repeat 0 50%;
+	}
+			
+		.slogan {
+			width: 229px;
+			height: 39px;
+			margin-left: -114px;
+			background: transparent url('../img/bg-poster-text_mobile.png') no-repeat;
+			}	
+			.slogan-sedona {
+				top: 52px;
+			}	
+			
+	.main-title {
+		line-height: 24px;
+		margin-bottom: 15px;
+		box-shadow: 0 -4px 15px 0 rgba(0,0,0,.3);
+	}
+			
+	.main-title h1 {
+		width: auto;
+		font-size: 18px;
+		padding: 22px 0 18px;
+	}
+	.review-doubleblock {
+		display: block;
+	}
+		.review-form-personal,
+		.review-doubleblock-column,
+		.review-form-checkbox,
+		.review-form-textarea{
+			border-bottom:1px #e5e5e5 solid;
+			padding: 0 20px;
+			margin: 0 0 25px;
+			width: auto;
+		}
+		.review-form-textarea {
+			border-bottom: 0;
+		}
+		
+		.review-form-personal{
+			margin: 0;
+		}
+		.review-form-personal,
+		.review-form-checkbox,
+		.review-doubleblock-column{
+			padding: 20px;
+		}
+		.review-form-personal:nth-child(2) {
+			padding-left:20px;
+			margin-bottom: 25px;
+		}
+		.review-form-personal:nth-child(2)::before,
+		.review-form-title span::after,
+		.review-form-title span::before {
+			content:none;
+		}
+		.review-form-personal:nth-child(2) .review-form-title {
+			text-align:center;
+		}
+		
+			fieldset ul li {margin-bottom: 5px;}
+			.review-form-personal .review-form-title,
+			.review-form-title {
+				font-size: 18px;
+				padding:0;
+				margin: 0;
+			}
+			.review-form-personal .review-form-title {
+				margin: 0 0 25px;
+			}
+				.review-form-title span {
+					display: block;
+					margin:0 auto;
+				}
+				.review-form-checkbox ul li {
+					width: 100%;
+				}
+				.form-radio + .form-label {
+					line-height:62px;
+				}
+				.form-row input {
+					width: 80%;
+					margin-right: -6px;
+				}
+				.form-radio + .form-label::before {
+					top: -18px;
+				}
+		.btn-big {
+			padding: 18px 48px;
+			margin: 0 20px;
+		}
+		
+		.form-clarify {
+			display: none;
+			visibility: hidden;
+		}
+		
+		
+		
+		.main-footer .footer-columns {
+			flex-direction: column;
+			padding: 50px 0 0;
+		}
+			.main-footer .footer-columns div {
+				margin-bottom: 10px;
+			}
+}

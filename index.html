@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title>Sedona</title>
+  <meta charset="UTF-8">
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+  <link href="css/reset.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+	<div class="main-container">
+		<header class="main-header">
+			<a class="logo" href="/"></a>
+			<nav class="main-menu clearfix">
+				<a href="#" class="btn-mobile close"></a>
+
+
+				<ul>
+					<li><a href="#">Главная</a></li>
+					<li><a href="#">Фото и видео</a></li>
+					<li><a href="#">Форма отзыва</a></li>
+					<li><a href="https://htmlacademy.ru/">HTML academy</a></li>
+				</ul>
+				<a href="#" class="btn-mobile fa fa-navicon"></a>
+			</nav>
+		</header>
+
+		<div class="main-poster">
+			<div class="slogan slogan-sedona">Sedona</div>
+		</div>
+		
+		<main class="content">
+			
+			<div class="main-title">
+				<h1>Оставьте свой отзыв</h1>
+				<p>Помогите нашим отелям стать лучше! оставьте отзыв о них, а <br/>
+				также о посещенных вами достопримечательностях</p>
+			</div>
+			
+			<div class="main-review">
+				<form class="review-form" action="#">
+				
+					<div class="review-doubleblock">
+						<fieldset class="review-form-personal">
+							<h2 class="review-form-title">Ваше общее впечатление:</h2>
+							<ul>
+								<li>
+									<input class="form-radio" id="radio-f-1" type="radio" name="feeling" value="Скорее положительное" />
+									<label class="form-label" for="radio-f-1">Скорее положительное</label>
+								</li>
+								<li>
+									<input class="form-radio" id="radio-f-2" type="radio" name="feeling" value="Скорее отрицательное" />
+									<label class="form-label" for="radio-f-2">Скорее отрицательное</label>
+								</li>
+								<li>
+									<input class="form-radio" id="radio-f-3" type="radio" name="feeling" value="Затрудняюсь ответить" />
+									<label class="form-label" for="radio-f-3">Затрудняюсь ответить</label>
+								</li>
+							</ul>
+						</fieldset>
+						
+						<fieldset class="review-form-personal">
+							<h2 class="review-form-title">Представьтесь:</h2>
+							<fieldset class="form-row">
+								<label class="form-label" for="name-in">Имя*: </label>
+								<input class="form-input" type="text" name="name-in" id="name-in" placeholder="Имя" required/>
+							</fieldset>
+							<fieldset class="form-row">
+								<label class="form-label" for="surname-in">Фамилия*: </label>
+								<input class="form-input" type="text" name="surname-in" id="surname-in" placeholder="Фамилия" required/>
+							</fieldset>
+							<fieldset class="form-row">
+								<label class="form-label" for="middlename-in">Отчество*: </label>
+								<input class="form-input" type="text" name="middlename-in" id="middlename-in" placeholder="Отчество" required/>
+							</fieldset>
+						</fieldset>
+					</div>
+					
+					<h2 class="review-form-title"><span>Контактная информация:</span></h2>
+					<fieldset class="review-doubleblock review-doubleblock-column">
+						<fieldset class="form-row">
+							<label class="form-label" for="phone-in">Телефон*: </label>
+							<input class="form-input form-input-phone" type="tel" name="phone-in" id="phone-in" placeholder="Введите телефон" pattern="\+7\s\(\d{3}\)\s\d{3}[-]\d{2}[-]\d{2}" required/>
+							<span class="btn btn-icons fa fa-phone"></span>
+						</fieldset>
+						<fieldset class="form-row">
+							<label class="form-label" for="email-in">Электронная почта*: </label>
+							<input class="form-input form-input-phone" type="email" name="email-in" id="email-in" placeholder="Введите e-mail" required/>
+							<span class="btn btn-icons fa fa-envelope"></span>
+						</fieldset>
+					</fieldset>
+					
+					<h2 class="review-form-title"><span>Посещенные достопримечательности:</span></h2>
+					<fieldset class="review-form-checkbox">
+						<ul>
+							<li>
+								<input class="form-checkbox" id="check-a-1" type="checkbox" name="attractions" value="Мост Дьявола" checked />
+								<label class="form-label" for="check-a-1">Мост Дьявола</label>
+							</li>
+							<li>
+								<input class="form-checkbox" id="check-a-2" type="checkbox" name="attractions" value="Гора-Колокол" />
+								<label class="form-label" for="check-a-2">Гора-Колокол</label>
+							</li>
+							<li>
+								<input class="form-checkbox" id="check-a-3" type="checkbox" name="attractions" value="Слайд-парк" />
+								<label class="form-label" for="check-a-3">Слайд-парк</label>
+							</li>
+							<li>
+								<input class="form-checkbox" id="check-a-4" type="checkbox" name="attractions" value="Красные скалы" />
+								<label class="form-label" for="check-a-4">Красные скалы</label>
+							</li>
+						</ul>
+					</fieldset>
+			
+					<h2 class="review-form-title"><span>Опишите свои эмоции:</span></h2>
+					<fieldset class="review-form-textarea">
+						<fieldset class="form-row">
+							<textarea class="form-textarea" name="text" placeholder="Опишите подробно все свои восторги"></textarea>
+						</fieldset>
+					</fieldset>
+					
+					<button class="btn btn-big" type="submit">Отправить отзыв</button>
+					<span class="form-clarify">* — обязательные поля</span>
+					
+				</form>
+			</div>
+		</main>
+
+		<footer class="main-footer">
+			<div class="footer-columns">
+				<div class="footer-hashtag">
+					<a href="#">#visitsedona</a>
+				</div>
+				<div class="footer-socials">
+					<ul>
+						<li><a class="btn btn-social fa fa-twitter" href="#"></a></li>
+						<li><a class="btn btn-social fa fa-facebook" href="#"></a></li>
+						<li><a class="btn btn-social fa fa-youtube-play" href="#"></a></li>
+					</ul>
+				</div>
+				<div class="footer-copyright">
+					<span>Разработано</span>
+					<a class="logo-htmlacademy" href="https://htmlacademy.ru/"></a>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
